@@ -1,12 +1,19 @@
 <DoctypeHtml>
 <html>
-  <head>
-    <title>남명준폰트</title>
-    <?PHP
-    echo shell_exec("python script.py");
-    ?>
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython_stdlib.min.js"></script>
     </head>
-  <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+  <body onload="brython()">
+    <button id='test-button'>눌러봐요</button>
     </body>
+</html>
+<script type="text/python">
+    from browser import document
+
+    def alert(event):
+        print("임장현엄마내스타일")
+    
+    document["test-button"].bind("click", alert)
+
+</script>
