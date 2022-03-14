@@ -1,24 +1,18 @@
-<DoctypeHtml>
 <html>
-    <head>남명준폰트
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.9/brython_stdlib.min.js"></script>
-        <meta name="google-site-verification" content="I1VhCGRnA9oQBTVAQyMO06ZQ4g2wgDFIbf1rK-qzDa8" />
-    </head>
-  <body onload="brython()">
-    <h6>.<br><br>남명준폰트 제조기</h6>
-    </body>
-</html>
+<head>남명준폰트 <br>제대로 적용 시키시려면 문장의 끝에 명사를 배치하셔야합니다.
+<script src="/brython.js"></script>
+</head>
+<body onload="brython()">
 <script type="text/python">
-    from browser import document
-    a=0
-    b= "인1"
-    c=a+b
-    def 명준체():
-        while True: 
-            a = str(input("글을 작성해주세요(반드시 명사로 끝날것ex(니얼굴 남명준))ps:명준체 변환 문자는 f12를 누른 뒤 console에 들어가면 나옵니다. 그리고 재사용 하시려면 f5를 눌러주세요"))
-            print(a+b)
-            break
-    명준체()
+from browser import document
+from browser.widgets.dialog import InfoDialog
 
-</script>
+def click(ev):
+    InfoDialog("Hello", f"{document['zone'].value}인1")
+
+# bind event 'click' on button to function echo
+document["echo"].bind("click", click)</script>
+<input id="zone">
+<button id="echo">누르셈ㅋ</button>
+</body>
+</html>
