@@ -8,11 +8,11 @@ from browser import document
 from browser.widgets.dialog import InfoDialog
 
 def click(ev):
-    InfoDialog("Hello", f"{document['zone'].value}인1")
+    InfoDialog("Hello", f" {document['zone'].value} 인1")
 
 # bind event 'click' on button to function echo
 document["echo"].bind("click", click)</script>
 <input id="zone">
-<button id="echo">누르셈ㅋ</button>
+<button id="echo">click</button>
 </body>
 </html>
