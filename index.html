@@ -1,27 +1,23 @@
 <html>
-<head>남명준폰트 <br>제대로 적용 시키시려면 문장의 끝에 명사를 배치하셔야합니다.
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython_stdlib.js">
+    </script>
 </head>
-<script type="java">
-import java.util.Scanner;
 
-public class test {
+<body onload="brython()">
 
-	public static void main(String[] args) {
-		String name;
-		int age;
-		double height;
-		String intro;
-		String buffer;
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("문장을 입력하세요[이때, 마지막은 명사형일것]");
-		name = sc.next();
-		buffer = sc.nextLine();
-		intro = sc.nextLine();
-		
-		System.out.println(""+name+"인1");
-		System.out.println(intro);
-	}
-}
+<script type="text/python">
+from browser import document
+
+document <= "Hello !"</script>
+
+
 </body>
+
 </html>
