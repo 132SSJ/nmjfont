@@ -13,17 +13,19 @@
 <body onload="brython()">
 
 <script type="text/python">
-a=0
-b= "인1"
-def 명준체():
-    while True: 
-        a = str(input("글을 작성해주세요(글의 끝은 명사로 할것 ex임장현 병신) 재사용을 원한다면 F5를 누르세요. 결과는 F12를 누르면 나오는 콘솔창에 써있습니다"))
-        print(a+b)
-        break
-    
+from browser import document, html
+def show_values(event):
+    input = document["input16"].value
+    select = document["select16"]
+    option = select.options[select.selectedIndex].value
+    text = document["textarea16"].value
+    document["zone16"].clear()
+    document["zone16"] <= (f"Value in INPUT field: {input}",
+        html.BR(), f"Selected option: {option}",
+        html.BR(), f"Value in TEXTAREA field: {text}"
+        )
 
-명준체()
-
+document["button16"].bind("click", show_values)
 
     </script>
 
