@@ -11,9 +11,12 @@
 </head>
 
 <body onload="brython()">
-
+<input id="input16" autocomplete="off" value="test">
+<button id="button16">남명준폰트로 변환</button>
+<div id="zone16" class="zone"></div>
 <script type="text/python">
 from browser import document, html
+
 def show_values(event):
     input = document["input16"].value
     select = document["select16"]
@@ -26,7 +29,6 @@ def show_values(event):
         )
 
 document["button16"].bind("click", show_values)
-
     </script>
 
 
