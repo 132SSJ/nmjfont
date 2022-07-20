@@ -1,37 +1,23 @@
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js">
-    </script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython_stdlib.js">
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<body>
+    
+    
+    <button id="countBtn" onclick="increase()">0</button>
+    
+    <script>
+        
+        var count=0;
+        function increase(){
+            count=count+1;
+            document.querySelector("#countBtn").innerText=count;
+        }
 
-<body onload="brython()">
-<input id="input16" autocomplete="off" value="test">
-<button id="button16">남명준폰트로 변환</button>
-<div id="zone16" class="zone"></div>
-<script type="text/python">
-from browser import document, html
-
-def show_values(event):
-    input = document["input16"].value
-    select = document["select16"]
-    option = select.options[select.selectedIndex].value
-    text = document["textarea16"].value
-    document["zone16"].clear()
-    document["zone16"] <= (f"Value in INPUT field: {input}",
-        html.BR(), f"Selected option: {option}",
-        html.BR(), f"Value in TEXTAREA field: {text}"
-        )
-
-document["button16"].bind("click", show_values)
+        
     </script>
-
-
 </body>
-
 </html>
